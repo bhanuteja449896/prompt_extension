@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "AI Prompt Enhancer",
+    "version": "1.0.0",
+    "description": "Adds an Enhance button next to ChatGPT's Tools button",
+    "permissions": ["activeTab"],
+    "host_permissions": [
+      "https://chatgpt.com/*",
+      "https://chat.openai.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://chatgpt.com/*", 
+          "https://chat.openai.com/*"
+        ],
+        "js": ["content.js"],
+        "css": ["styles.css"],
+        "run_at": "document_end"
+      }
+    ],
+    "web_accessible_resources": [{
+      "resources": ["icon.png"],
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"]
+    }],
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
