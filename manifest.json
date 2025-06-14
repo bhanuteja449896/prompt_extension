@@ -3,10 +3,14 @@
     "name": "AI Prompt Enhancer",
     "version": "1.0.0",
     "description": "Adds an Enhance button next to ChatGPT's Tools button",
-    "permissions": ["activeTab"],
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
     "host_permissions": [
-      "https://chatgpt.com/*",
-      "https://chat.openai.com/*"
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://generativelanguage.googleapis.com/*"
     ],
     "content_scripts": [
       {
